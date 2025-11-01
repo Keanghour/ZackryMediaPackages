@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💼 កញ្ចប់ Poster Packages និងតម្លៃ Boosted Facebook & TikTok 📣</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>💼 កញ្ចប់ Poster Packages និងតម្លៃ Boosted Facebook & TikTok 📣</h1>
+  <p>📦 កញ្ចប់ Poster ប្រចាំសប្តាហ៍ និងប្រចាំខែ</p>
+
+  <!-- WEEKLY PLANS -->
+  <h2>🗓 ប្រចាំសប្តាហ៍</h2>
+
+  <div class="package" onclick="orderPlan('ប្រចាំសប្តាហ៍ 3 Posters → $10', 'Free 1 Poster សម្រាប់ការកម្មង់ដំបូង')">
+    <div class="plan-title">🖼 3 Posters → $10</div>
+    <div class="bonus">🎁 Free 1 Poster សម្រាប់ការកម្មង់ដំបូង</div>
+  </div>
+
+  <div class="package" onclick="orderPlan('ប្រចាំសប្តាហ៍ 3 Posters + Boost Page Facebook → $19', 'Free 1 Poster សម្រាប់ការកម្មង់ដំបូង')">
+    <div class="plan-title">🖼 3 Posters + 📣 Boost Page Facebook → $19</div>
+    <div class="bonus">🎁 Free 1 Poster សម្រាប់ការកម្មង់ដំបូង</div>
+  </div>
+
+  <!-- WEEKLY BOOST PLANS -->
+  <div class="package" onclick="orderPlan('ប្រចាំសប្តាហ៍ Boost Page Facebook → $10', '')">
+    <div class="plan-title">📣 Boost Page Facebook → $10</div>
+  </div>
+
+  <div class="package" onclick="orderPlan('ប្រចាំសប្តាហ៍ Boost TikTok → $5', '')">
+    <div class="plan-title">🎵 Boost TikTok → $5</div>
+  </div>
+
+  <div class="package" onclick="orderPlan('ប្រចាំសប្តាហ៍ Boost Facebook និង TikTok → $12', '')">
+    <div class="plan-title">📣🎵 Boost Facebook និង TikTok → $12</div>
+  </div>
+
+  <!-- MONTHLY PLANS -->
+  <h2>🗓 ប្រចាំខែ</h2>
+
+  <div class="package" onclick="orderPlan('ប្រចាំខែ 12 Posters → $35', 'Free 3 Posters សម្រាប់ការកម្មង់ដំបូង')">
+    <div class="plan-title">🖼 12 Posters → $35</div>
+    <div class="bonus">🎁 Free 3 Posters សម្រាប់ការកម្មង់ដំបូង</div>
+  </div>
+
+  <div class="package" onclick="orderPlan('ប្រចាំខែ 12 Posters + Boost Page Facebook + Boost TikTok 2 សប្តាហ៍ → $49', 'Free 3 Posters សម្រាប់ការកម្មង់ដំបូង')">
+    <div class="plan-title">🖼 12 Posters + 📣 Boost Page Facebook + 🎵 Boost TikTok 2 សប្តាហ៍ → $49</div>
+    <div class="bonus">🎁 Free 3 Posters សម្រាប់ការកម្មង់ដំបូង</div>
+  </div>
+
+  <div class="package" onclick="orderPlan('ប្រចាំខែ 15 Posters + Boost Page Facebook + Boost TikTok → $59', 'Free 3 Posters សម្រាប់ការកម្មង់ដំបូង')">
+    <div class="plan-title">🖼 15 Posters + 📣 Boost Page Facebook + 🎵 Boost TikTok → $59</div>
+    <div class="bonus">🎁 Free 3 Posters សម្រាប់ការកម្មង់ដំបូង</div>
+  </div>
+
+  <!-- MONTHLY BOOST PLANS -->
+  <div class="package" onclick="orderPlan('ប្រចាំខែ Boost Page Facebook → $30', '')">
+    <div class="plan-title">📣 Boost Page Facebook → $30</div>
+  </div>
+
+  <div class="package" onclick="orderPlan('ប្រចាំខែ Boost TikTok → $15', '')">
+    <div class="plan-title">🎵 Boost TikTok → $15</div>
+  </div>
+
+  <div class="package" onclick="orderPlan('ប្រចាំខែ Boost Facebook និង TikTok → $40', '')">
+    <div class="plan-title">📣🎵 Boost Facebook និង TikTok → $40</div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact">
+    <h3>📩 ចង់កម្មង់ឥឡូវនេះ?</h3>
+    <p>📞 095 323 346</p>
+    <p>💬 Telegram: <a href="https://t.me/phokeanghour" target="_blank">t.me/phokeanghour</a></p>
+  </div>
+
+  <script>
+    function orderPlan(planName, bonusText) {
+      const telegramUser = "phokeanghour"; // 🔹 change to your Telegram username
+      const message = `ខ្ញុំចង់បាន​កញ្ចប់${planName}${bonusText ? ' ***' + bonusText : ''}`;
+      const encodedMsg = encodeURIComponent(message);
+
+      // Try to open Telegram app first, then fallback to web version
+      const telegramAppUrl = `tg://resolve?domain=${telegramUser}&text=${encodedMsg}`;
+      const telegramWebUrl = `https://t.me/${telegramUser}?text=${encodedMsg}`;
+
+      window.location.href = telegramAppUrl;
+
+      // Fallback after 1.5s if app isn't installed
+      setTimeout(() => {
+        window.location.href = telegramWebUrl;
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
