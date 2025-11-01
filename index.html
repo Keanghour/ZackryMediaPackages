@@ -5,92 +5,257 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poster & Boost Packages</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #222;
+        }
+        .package {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        .package h3 {
+            margin: 0 0 10px 0;
+            cursor: pointer;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding-left: 15px;
+        }
+        .extras {
+            margin: 10px 0;
+        }
+        button {
+            background: #0078d4;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005ea2;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>💼 កញ្ចប់ Poster Packages និង Boost Packages 📣</h1>
-        <!-- <p>🗓ប្រចាំសប្តាហ៍ និងប្រចាំខែ🗓</p> -->
         <p>📦 កញ្ចប់ Posters និង Boost ប្រចាំសប្តាហ៍ និងប្រចាំខែ</p>
 
         <!-- Weekly Poster Packages -->
         <h2>🗓 ប្រចាំសប្តាហ៍ - Poster Packages</h2>
         <div class="package">
-            <h3>🖼 3 Posters → $10</h3>
-            <p>🎁 Free 1 Poster សម្រាប់ការកម្មង់ដំបូង</p>
-            <button onclick="orderTelegram('3 Posters → $10 ***Free 1 Poster***')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">🖼 3 Posters → $10</h3>
+            <div class="details">
+                <p>🎁 Free 1 Poster សម្រាប់ការកម្មង់ដំបូង</p>
+                <ul>
+                    <li>រចនាតាមគំនិតរបស់អ្នក 2 និងសេរី 1</li>
+                    <li>អាចកែប្រែ 2 ដងបន្ទាប់ពីរចនា</li>
+                    <li>PSD/AI file → +$2</li>
+                    <li>កែប្រែ 2 ដង → +$1 គ្រប់ការកែប្រែ</li>
+                </ul>
+                <button onclick="orderPackage('3 Posters → $10', this)">Order Now</button>
+            </div>
         </div>
 
         <div class="package">
-            <h3>🖼 3 Posters + 📣 Boost Page Facebook → $19</h3>
-            <p>🎁 Free 1 Poster សម្រាប់ការកម្មង់ដំបូង</p>
-            <button onclick="orderTelegram('3 Posters + Boost Facebook → $19 ***Free 1 Poster***')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">🖼 3 Posters + 📣 Boost Page Facebook → $19</h3>
+            <div class="details">
+                <p>🎁 Free 1 Poster សម្រាប់ការកម្មង់ដំបូង</p>
+                <ul>
+                    <li>រចនាតាមគំនិតរបស់អ្នក 2 និងសេរី 1</li>
+                    <li>អាចកែប្រែ 2 ដងបន្ទាប់ពីរចនា</li>
+                    <li>PSD/AI file → +$2</li>
+                    <li>កែប្រែ 2 ដង → +$1 គ្រប់ការកែប្រែ</li>
+                    <li>រាយការណ៍ប្រចាំថ្ងៃ នៅម៉ោង 11យប់–12យប់</li>
+                    <li>កំណត់ការវាយតម្លៃអតិថិជន និងផ្ដល់អនុសាសន៍រៀងរាល់ 3-7 ថ្ងៃ</li>
+                </ul>
+                <button onclick="orderPackage('3 Posters + Boost Facebook → $19', this)">Order Now</button>
+            </div>
         </div>
 
         <!-- Weekly Boost Packages -->
         <h2>🗓 ប្រចាំសប្តាហ៍ - Boost Packages</h2>
         <div class="package">
-            <h3>📣 Boost Page Facebook → $10</h3>
-            <button onclick="orderTelegram('Weekly Boost: Facebook → $10')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">📣 Boost Page Facebook → $10</h3>
+            <div class="details">
+                <ul>
+                    <li>រាយការណ៍ប្រចាំថ្ងៃ នៅម៉ោង 11យប់–12យប់</li>
+                    <li>កំណត់ការវាយតម្លៃអតិថិជន និងផ្ដល់អនុសាសន៍រៀងរាល់ 3-7 ថ្ងៃ</li>
+                </ul>
+                <button onclick="orderPackage('Weekly Boost: Facebook → $10', this)">Order Now</button>
+            </div>
         </div>
 
         <div class="package">
-            <h3>🎵 Boost TikTok → $5</h3>
-            <button onclick="orderTelegram('Weekly Boost: TikTok → $5')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">🎵 Boost TikTok → $5</h3>
+            <div class="details">
+                <ul>
+                    <li>រាយការណ៍ប្រចាំថ្ងៃ នៅម៉ោង 11យប់–12យប់</li>
+                    <li>កំណត់ការវាយតម្លៃអតិថិជន និងផ្ដល់អនុសាសន៍រៀងរាល់ 3-7 ថ្ងៃ</li>
+                </ul>
+                <button onclick="orderPackage('Weekly Boost: TikTok → $5', this)">Order Now</button>
+            </div>
         </div>
 
         <div class="package">
-            <h3>📣🎵 Boost Facebook + TikTok → $12</h3>
-            <button onclick="orderTelegram('Weekly Boost: Facebook + TikTok → $12')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">📣🎵 Boost Facebook + TikTok → $12</h3>
+            <div class="details">
+                <ul>
+                    <li>រាយការណ៍ប្រចាំថ្ងៃ នៅម៉ោង 11យប់–12យប់</li>
+                    <li>កំណត់ការវាយតម្លៃអតិថិជន និងផ្ដល់អនុសាសន៍រៀងរាល់ 3-7 ថ្ងៃ</li>
+                </ul>
+                <button onclick="orderPackage('Weekly Boost: Facebook + TikTok → $12', this)">Order Now</button>
+            </div>
         </div>
 
         <!-- Monthly Poster Packages -->
         <h2>🗓 ប្រចាំខែ - Poster Packages</h2>
         <div class="package">
-            <h3>🖼 12 Posters → $35</h3>
-            <p>🎁 Free 3 Posters សម្រាប់ការកម្មង់ដំបូង</p>
-            <button onclick="orderTelegram('12 Posters → $35 ***Free 3 Posters***')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">🖼 12 Posters → $35</h3>
+            <div class="details">
+                <p>🎁 Free 3 Posters សម្រាប់ការកម្មង់ដំបូង</p>
+                <ul>
+                    <li>រចនាតាមគំនិតរបស់អ្នក 8 និងសេរី 4</li>
+                    <li>អាចកែប្រែ 3 ដងបន្ទាប់ពីរចនា</li>
+                    <li>PSD/AI file → +$2</li>
+                    <li>កែប្រែ 2 ដង → +$1 គ្រប់ការកែប្រែ</li>
+                </ul>
+                <button onclick="orderPackage('12 Posters → $35', this)">Order Now</button>
+            </div>
         </div>
 
         <div class="package">
-            <h3>🖼 12 Posters + 📣 Boost Facebook + 🎵 Boost TikTok 2 weeks → $49</h3>
-            <p>🎁 Free 3 Posters សម្រាប់ការកម្មង់ដំបូង</p>
-            <button onclick="orderTelegram('12 Posters + Boost Facebook + Boost TikTok 2 weeks → $49 ***Free 3 Posters***')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">🖼 12 Posters + 📣 Boost Facebook + 🎵 Boost TikTok 2 weeks → $49</h3>
+            <div class="details">
+                <p>🎁 Free 3 Posters សម្រាប់ការកម្មង់ដំបូង</p>
+                <ul>
+                    <li>រចនាតាមគំនិតរបស់អ្នក 8 និងសេរី 4</li>
+                    <li>អាចកែប្រែ 3 ដងបន្ទាប់ពីរចនា</li>
+                    <li>PSD/AI file → +$2</li>
+                    <li>កែប្រែ 2 ដង → +$1 គ្រប់ការកែប្រែ</li>
+                    <li>រួមបញ្ចូល Boost Facebook + Tiktok 2 សប្តាហ៍</li>
+                    <li>រាយការណ៍ប្រចាំថ្ងៃ នៅម៉ោង 11យប់–12យប់</li>
+                    <li>កំណត់ការវាយតម្លៃអតិថិជន និងផ្ដល់អនុសាសន៍រៀងរាល់ 3-7 ថ្ងៃ</li>
+                </ul>
+                <button onclick="orderPackage('12 Posters + Boost Facebook + Boost TikTok 2 weeks → $49', this)">Order Now</button>
+            </div>
         </div>
 
         <div class="package">
-            <h3>🖼 15 Posters + 📣 Boost Facebook + 🎵 Boost TikTok → $59</h3>
-            <p>🎁 Free 3 Posters សម្រាប់ការកម្មង់ដំបូង</p>
-            <button onclick="orderTelegram('15 Posters + Boost Facebook + Boost TikTok → $59 ***Free 3 Posters***')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">🖼 15 Posters + 📣 Boost Facebook + 🎵 Boost TikTok → $59</h3>
+            <div class="details">
+                <p>🎁 Free 2 Posters សម្រាប់ការកម្មង់ដំបូង</p>
+                <ul>
+                    <li>រចនាតាមគំនិតរបស់អ្នក 10 និងសេរី 5</li>
+                    <li>អាចកែប្រែ 4 ដងបន្ទាប់ពីរចនា</li>
+                    <li>PSD/AI file → +$2</li>
+                    <li>កែប្រែ 2 ដង → +$1 គ្រប់ការកែប្រែ</li>
+                    <li>រួមបញ្ចូល Boost Facebook + Tiktok 2 សប្តាហ៍</li>
+                    <li>រាយការណ៍ប្រចាំថ្ងៃ នៅម៉ោង 11យប់–12យប់</li>
+                    <li>កំណត់ការវាយតម្លៃអតិថិជន និងផ្ដល់អនុសាសន៍រៀងរាល់ 3-7 ថ្ងៃ</li>
+                </ul>
+                <button onclick="orderPackage('15 Posters + Boost Facebook + Boost TikTok → $59', this)">Order Now</button>
+            </div>
         </div>
 
-        <!-- Monthly Boost Packages -->
         <h2>🗓 ប្រចាំខែ - Boost Packages</h2>
         <div class="package">
-            <h3>📣 Boost Page Facebook → $30</h3>
-            <button onclick="orderTelegram('Monthly Boost: Facebook → $30')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">📣 Boost Page Facebook → $30</h3>
+            <div class="details">
+                <ul>
+                    <li>រាយការណ៍ប្រចាំថ្ងៃ នៅម៉ោង 11យប់–12យប់</li>
+                    <li>កំណត់ការវាយតម្លៃអតិថិជន និងផ្ដល់អនុសាសន៍រៀងរាល់ 3-7 ថ្ងៃ</li>
+                </ul>
+                <button onclick="orderPackage('Weekly Boost: Facebook → $30', this)">Order Now</button>
+            </div>
         </div>
 
         <div class="package">
-            <h3>🎵 Boost TikTok → $15</h3>
-            <button onclick="orderTelegram('Monthly Boost: TikTok → $15')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">🎵 Boost TikTok → $15</h3>
+            <div class="details">
+                <ul>
+                    <li>រាយការណ៍ប្រចាំថ្ងៃ នៅម៉ោង 11យប់–12យប់</li>
+                    <li>កំណត់ការវាយតម្លៃអតិថិជន និងផ្ដល់អនុសាសន៍រៀងរាល់ 3-7 ថ្ងៃ</li>
+                </ul>
+                <button onclick="orderPackage('Weekly Boost: TikTok → $15', this)">Order Now</button>
+            </div>
         </div>
 
         <div class="package">
-            <h3>📣🎵 Boost Facebook + TikTok → $40</h3>
-            <button onclick="orderTelegram('Monthly Boost: Facebook + TikTok → $40')">Order Now</button>
+            <h3 onclick="toggleDetails(this)">📣🎵 Boost Facebook + TikTok → $40</h3>
+            <div class="details">
+                <ul>
+                    <li>រាយការណ៍ប្រចាំថ្ងៃ នៅម៉ោង 11យប់–12យប់</li>
+                    <li>កំណត់ការវាយតម្លៃអតិថិជន និងផ្ដល់អនុសាសន៍រៀងរាល់ 3-7 ថ្ងៃ</li>
+                </ul>
+                <button onclick="orderPackage('Weekly Boost: Facebook + TikTok → $40', this)">Order Now</button>
+            </div>
         </div>
 
         <!-- Contact -->
         <div class="contact">
-            <h3>📩 សូមទាក់ទងមកយើងតាម </h3>
+            <h3>📩 សូមទាក់ទងមកយើងតាម 📩</h3>
             <p>📞 095 323 346</p>
             <p>💬 Telegram: <a href="https://t.me/phokeanghour" target="_blank">t.me/phokeanghour</a></p>
         </div>
     </div>
 
     <script>
-        function orderTelegram(message) {
-            const encodedMessage = encodeURIComponent(message);
+        function toggleDetails(element) {
+            const details = element.nextElementSibling;
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function orderPackage(baseText, btn) {
+            const container = btn.parentElement;
+            let totalText = baseText;
+            let totalPrice = 0;
+
+            // Get base price from text
+            const match = baseText.match(/\$([0-9]+)/);
+            if(match) totalPrice += parseInt(match[1]);
+
+            // PSD file
+            const psdCheckbox = container.querySelector('.psd');
+            if(psdCheckbox && psdCheckbox.checked) {
+                totalPrice += parseInt(psdCheckbox.dataset.price);
+                totalText += ' + PSD/AI file';
+            }
+
+            // Extra edits
+            const extraEdits = container.querySelector('.extra-edits');
+            if(extraEdits && parseInt(extraEdits.value) > 0) {
+                totalPrice += parseInt(extraEdits.dataset.price) * parseInt(extraEdits.value);
+                totalText += ` + ${extraEdits.value} extra edit(s)`;
+            }
+
+            totalText += ` → Total: $${totalPrice}`;
+
+            const encodedMessage = encodeURIComponent(totalText);
             window.open(`https://t.me/phokeanghour?text=${encodedMessage}`, '_blank');
         }
     </script>
