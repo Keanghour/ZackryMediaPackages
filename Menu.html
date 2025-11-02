@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ផលិតផល</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Noto Sans Khmer', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* 🔹 Navigation Bar */
+    nav {
+      background-color: #ff6600;
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #fffbea;
+    }
+
+    nav a.active {
+      color: #ffecc2;
+      border-bottom: 2px solid white;
+      padding-bottom: 2px;
+    }
+
+    header {
+      text-align: center;
+      background-color: #fff;
+      padding: 25px 15px 10px;
+      border-bottom: 2px solid #ff6600;
+    }
+
+    header h1 {
+      color: #222;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    /* 🔹 Menu Grid */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* 🔹 Menu Item Card */
+    .menu-item {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu-item img {
+      width: 100%;
+      max-width: 1080px;
+      aspect-ratio: 1 / 1; /* Keeps square 1080x1080 look */
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .menu-item h2 {
+      color: #333;
+      font-size: 1.1rem;
+      margin: 12px 0 5px;
+    }
+
+    .price {
+      color: #ff6600;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      list-style-type: "• ";
+      text-align: left;
+      padding-left: 20px;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* 🔹 Footer / Contact */
+    footer {
+      text-align: center;
+      background-color: #ff6600;
+      color: white;
+      padding: 25px 10px;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: #fffbea;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .menu {
+        padding: 10px;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Navigation -->
+  <nav>
+    <a href="index.html">🏠 កញ្ចប់សេវា</a>
+    <a href="index1.html" class="active">🍱 ម៉ឺនុយផលិតផល</a>
+    <!-- <a href="#contact">📞 ទាក់ទងយើង</a> -->
+  </nav>
+
+  <header>
+    <h1>ម៉ឺនុយផលិតផល</h1>
+  </header>
+
+  <!-- 🔹 Menu Sections -->
+  <section class="menu">
+    <div class="menu-item">
+      <img src="img/image1.png" alt="Poster">
+      <h2>ការរចនា Poster</h2>
+      <p class="price">$5</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 1-2 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image2.png" alt="X-Banner">
+      <h2>ការរចនា X-Banner</h2>
+      <p class="price">$8</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 7 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 3-5 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image3.png" alt="Menu Design">
+      <h2>ការរចនា Menu</h2>
+      <p class="price">$10</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 3-5 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image4.png" alt="Promotion Flyer">
+      <h2>ការរចនា Promotion Flyer</h2>
+      <p class="price">$8</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 2-3 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image5.png" alt="Cover Design">
+      <h2>ការរចនា Cover</h2>
+      <p class="price">$5</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 2-3 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image6.png" alt="Greeting Card">
+      <h2>ការរចនា លិខិតជូនពរ</h2>
+      <p class="price">$5</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 2-3 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image7.jpg" alt="Promotion Banner">
+      <h2>ការរចនា Promotion Banner</h2>
+      <p class="price">$8</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 2-3 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image8.jpg" alt="Logo Design">
+      <h2>ការរចនា Logo</h2>
+      <p class="price">$15 +</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 7-10 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image9.jpg" alt="Namecard Design">
+      <h2>ការរចនា Namecard</h2>
+      <p class="price">$10</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 5-7 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image10.jpg" alt="T-shirt Mockup">
+      <h2>ការរចនា T-shirt Mockup</h2>
+      <p class="price">$7</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 5-7 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image11.jpg" alt="Hat Mockup">
+      <h2>ការរចនា Hat Mockup</h2>
+      <p class="price">$5</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 3-5 ថ្ងៃ</li>
+      </ul>
+    </div>
+
+    <div class="menu-item">
+      <img src="img/image12.jpg" alt="Event Poster">
+      <h2>ការរចនា Event Poster</h2>
+      <p class="price">$5</p>
+      <ul class="description">
+        <li>មាន PSD/AI</li>
+        <li>អាចកែប្រែ 5 ដងបន្ទាប់ពីរចនា</li>
+        <li>កែប្រែ 1 ដង $1 គ្រប់ការកែប្រែ</li>
+        <li>រយៈពេល​​ 3-5 ថ្ងៃ</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer id="contact">
+    <h3>📞 ទាក់ទងយើង 📞</h3>
+    <p>📱 095 323 346</p>
+    <p>💬 Telegram: <a href="https://t.me/phokeanghour" target="_blank">Click Here</a></p>
+  </footer>
+
+</body>
+</html>
