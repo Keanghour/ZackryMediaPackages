@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poster & Boost Packages</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- 🔸 Navigation -->
+  <nav>
+    <a href="servicePackages.html" class="active">🏠 កញ្ចប់សេវា</a>
+    <a href="menu.html">🍱 ផលិតផល</a>
+    <a href="contact.html">📞 ទំនាក់ទំនង</a>
+  </nav>
+
+  <!-- 🔸 Header Section -->
+  <header>
+    <h1>💼 កញ្ចប់ Poster & Boost Packages 📣</h1>
+    <p>ជ្រើសរើសកញ្ចប់សេវា Posters និង Boost ដែលសមស្របសម្រាប់អាជីវកម្មរបស់អ្នក</p>
+  </header>
+
+  <!-- 🔸 Tabs -->
+  <div class="tabs">
+    <div class="tab active" data-target="weekly">🗓 ប្រចាំសប្តាហ៍</div>
+    <div class="tab" data-target="monthly">🗓 ប្រចាំខែ</div>
+  </div>
+
+  <!-- 🔸 Weekly Packages -->
+  <div id="weekly" class="packages active">
+    <div class="package-card">
+      <h3>🖼 3 Posters / week</h3>
+      <p class="price-tag">$10</p>
+      <ul>
+        <li>🎁 Free 1 Poster សម្រាប់ការកម្មង់ដំបូង</li>
+        <li>រចនាតាមគំនិតរបស់អ្នក 2 និងសេរី 1</li>
+        <li>អាចកែប្រែ 2 ដង</li>
+        <li>PSD/AI file → +$2</li>
+      </ul>
+      <button onclick="orderPackage('3 Posters → $10')">📩 កម្មង់ឥឡូវនេះ</button>
+    </div>
+
+    <div class="package-card">
+      <h3>🖼 3 Posters + 📣 Boost Facebook</h3>
+      <p class="price-tag">$19</p>
+      <ul>
+        <li>🎁 Free 1 Poster សម្រាប់ការកម្មង់ដំបូង</li>
+        <li>រាយការណ៍ប្រចាំថ្ងៃ</li>
+        <li>កំណត់ការវាយតម្លៃអតិថិជន</li>
+      </ul>
+      <button onclick="orderPackage('3 Posters + Boost Facebook → $19')">📩 កម្មង់ឥឡូវនេះ</button>
+    </div>
+
+    <div class="package-card">
+      <h3>📣 Boost Facebook</h3>
+      <p class="price-tag">$10</p>
+      <ul>
+        <li>រាយការណ៍ប្រចាំថ្ងៃ</li>
+        <li>កំណត់ការវាយតម្លៃអតិថិជន</li>
+        <li>ផ្ដល់អនុសាសន៍រៀងរាល់ 3 ថ្ងៃ</li>
+      </ul>
+      <button onclick="orderPackage('Weekly Boost Facebook → $10')">📩 កម្មង់ឥឡូវនេះ</button>
+    </div>
+
+    <div class="package-card">
+      <h3>🎵 Boost TikTok</h3>
+      <p class="price-tag">$5</p>
+      <ul>
+        <li>រាយការណ៍ប្រចាំថ្ងៃ</li>
+        <li>កំណត់ការវាយតម្លៃអតិថិជន</li>
+        <li>ផ្ដល់អនុសាសន៍រៀងរាល់ 3 ថ្ងៃ</li>
+      </ul>
+      <button onclick="orderPackage('Weekly Boost TikTok → $5')">📩 កម្មង់ឥឡូវនេះ</button>
+    </div>
+  </div>
+
+  <!-- 🔸 Monthly Packages -->
+  <div id="monthly" class="packages" style="display:none;">
+    <div class="package-card">
+      <h3>🖼 12 Posters</h3>
+      <p class="price-tag">$35</p>
+      <ul>
+        <li>🎁 Free 3 Posters សម្រាប់ការកម្មង់ដំបូង</li>
+        <li>រចនាតាមគំនិតរបស់អ្នក 8 និងសេរី 4</li>
+        <li>អាចកែប្រែ 3 ដង</li>
+      </ul>
+      <button onclick="orderPackage('12 Posters → $35')">📩 កម្មង់ឥឡូវនេះ</button>
+    </div>
+
+    <div class="package-card">
+      <h3>🖼 12 Posters + 📣 Facebook + 🎵 TikTok Boost</h3>
+      <p class="price-tag">$49</p>
+      <ul>
+        <li>Boost Facebook + TikTok 2 សប្តាហ៍</li>
+        <li>🎁 Free 3 Posters</li>
+        <li>រាយការណ៍ប្រចាំថ្ងៃ</li>
+        <li>កំណត់ការវាយតម្លៃអតិថិជន</li>
+        <li>ផ្ដល់អនុសាសន៍រៀងរាល់ 3 ថ្ងៃ</li>
+      </ul>
+      <button onclick="orderPackage('12 Posters + Boost Facebook + TikTok 2 weeks → $49')">📩 កម្មង់ឥឡូវនេះ</button>
+    </div>
+
+    <div class="package-card">
+      <h3>📣 Boost Facebook</h3>
+      <p class="price-tag">$35 / Month</p>
+      <ul>
+        <li>រាយការណ៍ប្រចាំថ្ងៃ</li>
+        <li>កំណត់ការវាយតម្លៃអតិថិជន</li>
+        <li>ផ្ដល់អនុសាសន៍រៀងរាល់ 3 ថ្ងៃ</li>
+      </ul>
+      <button onclick="orderPackage('Boost Facebook → $35 / Month')">📩 កម្មង់ឥឡូវនេះ</button>
+    </div>
+
+    <div class="package-card">
+      <h3>🎵 Boost TikTok</h3>
+      <p class="price-tag">$15 / Month</p>
+      <ul>
+        <li>រាយការណ៍ប្រចាំថ្ងៃ</li>
+        <li>កំណត់ការវាយតម្លៃអតិថិជន</li>
+        <li>ផ្ដល់អនុសាសន៍រៀងរាល់ 3 ថ្ងៃ</li>
+      </ul>
+      <button onclick="orderPackage('Boost TikTok → $15 / Month')">📩 កម្មង់ឥឡូវនេះ</button>
+    </div>
+  </div>
+
+  <!-- 🔸 Contact -->
+  <div class="contact" id="contact">
+    <h3>📩 សូមទាក់ទងមកយើងតាម 📩</h3>
+    <p>📞 095 323 346</p>
+    <p>💬 Telegram: <a href="https://t.me/phokeanghour" target="_blank">Click Here</a></p>
+  </div>
+
+  <script>
+    // Tab switching logic
+    const tabs = document.querySelectorAll('.tab');
+    const packages = document.querySelectorAll('.packages');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = tab.dataset.target;
+        packages.forEach(p => p.style.display = (p.id === target) ? 'grid' : 'none');
+      });
+    });
+
+    // Order function
+    function orderPackage(packageName) {
+      const url = `https://t.me/phokeanghour?text=សួស្តី! ខ្ញុំចង់កម្មង់: ${encodeURIComponent(packageName)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+
+</html>
